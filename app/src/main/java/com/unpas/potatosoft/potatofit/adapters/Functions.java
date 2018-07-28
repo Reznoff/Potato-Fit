@@ -1,4 +1,4 @@
-package com.unpas.potatosoft.potatofit.Functions;
+package com.unpas.potatosoft.potatofit.adapters;
 
 import android.widget.ImageView;
 

@@ -8,7 +8,7 @@
     android:backgroundTintMode="screen"
     android:orientation="vertical"
 
-    tools:context=".Fragments.LoginFragment">
+    tools:context=".fragments.LoginFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -83,21 +83,38 @@
                 android:layout_marginRight="21dp"
                 android:text="Lupa Password ?" />
 
-            <Button
-                android:id="@+id/btn_login"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:background="@color/cardview_dark_background"
-                android:text="Login"
-                android:textColor="#555" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <com.facebook.login.widget.LoginButton
-                android:id="@+id/fb_login"
-                android:layout_width="match_parent"
-                android:layout_height="37dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"/>
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/cardview_dark_background"
+                    android:text="Login"
+                    android:textColor="#555" />
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/fb_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp" />
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/google_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

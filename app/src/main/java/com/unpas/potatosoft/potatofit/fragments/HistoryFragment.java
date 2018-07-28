@@ -1,9 +1,6 @@
-package com.unpas.potatosoft.potatofit.Fragments;
+package com.unpas.potatosoft.potatofit.fragments;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,22 +11,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.unpas.potatosoft.potatofit.Activities.MainActivity;
-import com.unpas.potatosoft.potatofit.Connection.SessionManager;
-import com.unpas.potatosoft.potatofit.Functions.RecyclerAdapter;
+import com.unpas.potatosoft.potatofit.activities.MainActivity;
+import com.unpas.potatosoft.potatofit.connection.SessionManager;
+import com.unpas.potatosoft.potatofit.adapters.RecyclerAdapter;
 import com.unpas.potatosoft.potatofit.R;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.unpas.potatosoft.potatofit.Activities;
+package com.unpas.potatosoft.potatofit.activities;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -17,14 +17,17 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.unpas.potatosoft.potatofit.Connection.SessionManager;
-import com.unpas.potatosoft.potatofit.Fragments.RunningFragment;
-import com.unpas.potatosoft.potatofit.Fragments.HistoryFragment;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
+import com.unpas.potatosoft.potatofit.connection.SessionManager;
+import com.unpas.potatosoft.potatofit.fragments.RunningFragment;
+import com.unpas.potatosoft.potatofit.fragments.HistoryFragment;
 import com.unpas.potatosoft.potatofit.R;
 
 public class MainActivity extends AppCompatActivity
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
+    private GoogleSignInAccount account;
 
     String fullName = "";
     TextView userName;
@@ -75,6 +79,22 @@ public class MainActivity extends AppCompatActivity
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+        handleSignInResult(task);
+    }
+
+    private void handleSignInResult(com.google.android.gms.tasks.Task<GoogleSignInAccount> completeTask) {
+        try {
+        GoogleSignInAccount account = completeTask.getResult(ApiException.class);
+        } catch (ApiException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override

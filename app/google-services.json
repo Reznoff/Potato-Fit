@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "72369925335",
+    "firebase_url": "https://potato-fit-6205a.firebaseio.com",
+    "project_id": "potato-fit-6205a",
+    "storage_bucket": "potato-fit-6205a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72369925335:android:767478a76a2bd555",
+        "android_client_info": {
+          "package_name": "com.unpas.potatosoft.potatofit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72369925335-i440molfnbpfpsvft37vrmgf9rdf2g4u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.unpas.potatosoft.potatofit",
+            "certificate_hash": "dfa58d245bc1bf3eb6e598cf30b9256f4aa4a4c9"
+          }
+        },
+        {
+          "client_id": "72369925335-01qurb4rir68m1b9mf9v62de8letqvbg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAly91LUUgXSHAehAYE_mekBXMz0EtqeI8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72369925335-01qurb4rir68m1b9mf9v62de8letqvbg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

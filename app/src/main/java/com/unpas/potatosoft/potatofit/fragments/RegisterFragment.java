@@ -1,18 +1,16 @@
-package com.unpas.potatosoft.potatofit.Fragments;
+package com.unpas.potatosoft.potatofit.fragments;
 
 import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -25,8 +23,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
-import com.unpas.potatosoft.potatofit.Activities.MainActivity;
-import com.unpas.potatosoft.potatofit.Connection.SessionManager;
 import com.unpas.potatosoft.potatofit.R;
 
 import org.json.JSONObject;

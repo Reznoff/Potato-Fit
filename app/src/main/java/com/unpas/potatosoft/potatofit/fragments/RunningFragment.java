@@ -1,17 +1,12 @@
-package com.unpas.potatosoft.potatofit.Fragments;
+package com.unpas.potatosoft.potatofit.fragments;
 
 import android.app.AlertDialog;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.location.Location;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -22,7 +17,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -30,17 +24,13 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.JsonRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.unpas.potatosoft.potatofit.Activities.MainActivity;
-import com.unpas.potatosoft.potatofit.Connection.SessionManager;
-import com.unpas.potatosoft.potatofit.Functions.RecyclerAdapter;
+import com.unpas.potatosoft.potatofit.activities.MainActivity;
+import com.unpas.potatosoft.potatofit.connection.SessionManager;
 import com.unpas.potatosoft.potatofit.R;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 

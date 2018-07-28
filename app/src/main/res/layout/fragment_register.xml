@@ -8,7 +8,7 @@
     android:backgroundTintMode="multiply"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".Fragments.RegisterFragment">
+    tools:context=".fragments.RegisterFragment">
 
     <!-- TODO: Update blank fragment layout -->
 

@@ -1,4 +1,4 @@
-package com.unpas.potatosoft.potatofit.Activities;
+package com.unpas.potatosoft.potatofit.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

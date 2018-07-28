@@ -1,12 +1,7 @@
-package com.unpas.potatosoft.potatofit.Connection;
+package com.unpas.potatosoft.potatofit.connection;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-
-import com.unpas.potatosoft.potatofit.Activities.LoginActivity;
-
-import java.util.HashMap;
 
 /**
  * Created by Ricec on 16/03/18.

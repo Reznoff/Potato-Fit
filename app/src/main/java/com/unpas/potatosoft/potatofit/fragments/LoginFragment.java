@@ -1,13 +1,11 @@
-package com.unpas.potatosoft.potatofit.Fragments;
+package com.unpas.potatosoft.potatofit.fragments;
 
 import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.util.Log;
@@ -32,9 +30,13 @@ import com.facebook.FacebookException;
 import com.facebook.Profile;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
-import com.unpas.potatosoft.potatofit.Activities.LoginActivity;
-import com.unpas.potatosoft.potatofit.Activities.MainActivity;
-import com.unpas.potatosoft.potatofit.Connection.SessionManager;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.unpas.potatosoft.potatofit.activities.MainActivity;
+import com.unpas.potatosoft.potatofit.connection.SessionManager;
 import com.unpas.potatosoft.potatofit.R;
 
 import org.json.JSONObject;
@@ -48,15 +50,24 @@ public class LoginFragment extends Fragment {
 
     private static final String EMAIL = "email";
 
+    //Facebook
     AccessToken accessToken = AccessToken.getCurrentAccessToken();
     Profile profile =  Profile.getCurrentProfile();
+
+    /** to check last login
+     * GoogleSignInClient account = GoogleSignIn.getLastSignedInAccount(this);
+     * it will return GoogleSignInAccount
+     */
 
     private LoginButton loginButton;
     private EditText username, password;
     private Button btn_login;
+    private SignInButton signInButton;
     public TextView lupa_password, daftar_akun;
     private String txtUser, txtPass;
     private String internetProtocol = "192.168.1.168";
+    private int RC_SIGN_IN = 9001; //idk is this lmao
+
 
     private RequestQueue queue;
     private ProgressDialog progressDialog;
@@ -71,6 +82,20 @@ public class LoginFragment extends Fragment {
         btn_login = rootView.findViewById(R.id.btn_login);
         lupa_password = rootView.findViewById(R.id.lupa_password);
         daftar_akun = rootView.findViewById(R.id.txtDaftarId);
+
+        //Google
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        final GoogleSignInClient mGoogleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
+        signInButton = rootView.findViewById(R.id.google_login);
+        signInButton.setSize(SignInButton.SIZE_STANDARD);
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+//                Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+                startActivityForResult(signInIntent, RC_SIGN_IN);
+            }
+        });
 
         loginButton = (LoginButton) rootView.findViewById(R.id.fb_login);
         loginButton.setReadPermissions(Arrays.asList(EMAIL));

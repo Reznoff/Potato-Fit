@@ -1,19 +1,13 @@
-package com.unpas.potatosoft.potatofit.Functions;
+package com.unpas.potatosoft.potatofit.adapters;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.unpas.potatosoft.potatofit.Activities.MainActivity;
+import com.unpas.potatosoft.potatofit.activities.MainActivity;
 import com.unpas.potatosoft.potatofit.R;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;

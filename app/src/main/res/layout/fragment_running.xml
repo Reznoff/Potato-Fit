@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#303030"
     android:orientation="vertical"
-    tools:context=".Fragments.RunningFragment">
+    tools:context=".fragments.RunningFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
