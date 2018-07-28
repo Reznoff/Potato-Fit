@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/beranda"
+            android:icon="@mipmap/ic_home_24px"
+            android:title="Beranda" />
+        <item
+            android:id="@+id/pengaturan"
+            android:icon="@mipmap/ic_settings_24px"
+            android:title="Pengaturan" />
+        <item
+            android:id="@+id/tentang"
+            android:icon="@mipmap/ic_report_problem_24px"
+            android:title="Tentang" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@mipmap/ic_highlight_off_24px"
+            android:title="Logout" />
+    </group>
+
+    <!--<item android:title="">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/logout"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Logout" />-->
+            <!--&lt;!&ndash;<item&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/nav_send"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:icon="@drawable/ic_menu_send"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:title="Send" />&ndash;&gt;-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>
